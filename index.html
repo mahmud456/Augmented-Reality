@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Medicine - Augmented Reality in Healthcare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#home" class="nav-brand" aria-label="Go to home">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>AR-Augmented Reality</span>
+                </a>
+            </div>
+
+            <div class="nav-controls">
+                <div class="lang-dropdown" id="lang-dropdown" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+                    <div class="lang-current"><i class="fas fa-language"></i><span id="current-lang-label">EN</span></div>
+                    <ul class="lang-menu" role="listbox">
+                        <li role="option" data-lang="en">ENGLISH</li>
+                        <li role="option" data-lang="bn">বাংলা</li>
+                    </ul>
+                </div>
+
+                <div class="dark-mode-toggle">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Left Sidebar Navigation -->
+    <aside id="sidebar" class="sidebar">
+        <nav class="nav-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#what-is-ar" class="nav-link">What is AR?</a>
+            <a href="#applications" class="nav-link">Applications</a>
+            <a href="#benefits" class="nav-link">Benefits & Limitations</a>
+            <a href="#ar-vs-vr" class="nav-link">AR vs VR</a>
+            <a href="#case-studies" class="nav-link">Case Studies</a>
+            <a href="#future" class="nav-link">Future Trends</a>
+            <a href="#demo" class="nav-link">Demo</a>
+            <a href="#quiz" class="nav-link">Quiz</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#community" class="nav-link">Community</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h1 class="hero-title">Augmented Reality in Medicine</h1>
+                    <p class="hero-subtitle">Transforming Healthcare Through Digital Innovation</p>
+                    <p class="hero-description">Discover how AR technology is revolutionizing medical education, surgery, and patient care.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('what-is-ar')">Get Started</button>
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is AR Section -->
+        <section id="what-is-ar" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What is Augmented Reality?</h2>
+                    <p class="section-description">Augmented Reality (AR) overlays digital information onto the real world, enhancing our perception and interaction with the environment.</p>
+                </div>
+                
+                <div class="ar-content">
+                    <div class="ar-info">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-eye"></i>
+                                <h3>What is AR?</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>AR combines real-world views with computer-generated images, sounds, and other sensory inputs to create an enhanced interactive experience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ar-types">
+                            <div class="ar-type-card">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>Mobile AR</h4>
+                                <p>Phones & Tablets</p>
+                                <img src="GIF/3d model.gif" alt="3D Model AR demo" class="ar-type-media" loading="lazy">
+                            </div>
+                            <div class="ar-type-card">
+                                <i class="fas fa-vr-cardboard"></i>
+                                <h4>Wearable AR</h4>
+                                <p>Glasses & Headsets</p>
+                                <img src="GIF/Headset.gif" alt="AR Headset demo" class="ar-type-media" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="applications" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Applications in Medicine</h2>
+                    <p class="section-description">Discover how AR is transforming healthcare</p>
+                </div>
+                
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Surgery Training</h3>
+                        <p>Practice complex procedures in a risk-free environment with real-time feedback.</p>
+                        <span class="badge">Training</span>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Anatomy Visualization</h3>
+                        <p>Explore 3D anatomical models overlaid on real patients for better understanding.</p>
+                        <span class="badge">Education</span>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Patient Education</h3>
+                        <p>Help patients understand their conditions and treatments through interactive visualizations.</p>
+                        <span class="badge">Care</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits & Limitations Section -->
+        <section id="benefits" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Benefits & Limitations</h2>
+                    <p class="section-description">Understanding the pros and cons of AR in healthcare</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefits-column">
+                        <h3 class="benefits-title benefits-title-positive">
+                            <i class="fas fa-check-circle"></i>
+                            Benefits
+                        </h3>
+                        
+                        <div class="benefit-card">
+                            <h4><i class="fas fa-star"></i> Improved Accuracy</h4>
+                            <p>Enhanced precision in medical procedures and diagnostics.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h4><i class="fas fa-star"></i> Better Education</h4>
+                            <p>Interactive learning experiences for medical students and professionals.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h4><i class="fas fa-star"></i> Cost-Effective Training</h4>
+                            <p>Reduce costs associated with traditional training methods.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h4><i class="fas fa-star"></i> Increased Accessibility</h4>
+                            <p>Remote access to expert guidance and training resources.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefits-column">
+                        <h3 class="benefits-title benefits-title-negative">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Limitations
+                        </h3>
+                        
+                        <div class="limitation-card">
+                            <h4><i class="fas fa-shield-alt"></i> High Initial Cost</h4>
+                            <p>Expensive hardware and software implementation.</p>
+                        </div>
+                        
+                        <div class="limitation-card">
+                            <h4><i class="fas fa-shield-alt"></i> Limited Accessibility</h4>
+                            <p>Not all healthcare facilities can afford AR technology.</p>
+                        </div>
+                        
+                        <div class="limitation-card">
+                            <h4><i class="fas fa-shield-alt"></i> Technical Issues</h4>
+                            <p>Hardware limitations and software glitches can disrupt procedures.</p>
+                        </div>
+                        
+                        <div class="limitation-card">
+                            <h4><i class="fas fa-shield-alt"></i> Training Required</h4>
+                            <p>Staff need proper training to use AR systems effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AR vs VR Section -->
+        <section id="ar-vs-vr" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How AR Differs from VR</h2>
+                    <p class="section-description">Understanding the key differences</p>
+                </div>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-card ar-card">
+                        <div class="comparison-header">
+                            <i class="fas fa-eye"></i>
+                            <h3>Augmented Reality (AR)</h3>
+                            <p style="color: black;">Enhances the real world with digital elements</p>
+                        </div>
+                        <div class="comparison-body">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Real environment</li>
+                                <li><i class="fas fa-check"></i> Digital overlays</li>
+                                <li><i class="fas fa-check"></i> Aware of surroundings</li>
+                                <li><i class="fas fa-check"></i> Mobile devices</li>
+                                <li><i class="fas fa-check"></i> Medical applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-card vr-card">
+                        <div class="comparison-header">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <h3>Virtual Reality (VR)</h3>
+                            <p style="color: black;">Creates a completely digital environment</p>
+                        </div>
+                        <div class="comparison-body">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Virtual environment</li>
+                                <li><i class="fas fa-check"></i> Full immersion</li>
+                                <li><i class="fas fa-check"></i> Isolated from reality</li>
+                                <li><i class="fas fa-check"></i> Headset required</li>
+                                <li><i class="fas fa-check"></i> Gaming & simulation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Case Studies & Examples</h2>
+                    <p class="section-description">Real-world implementations and success stories</p>
+                </div>
+                
+                <div class="case-studies-grid">
+                    <div class="case-study-card">
+                        <div class="case-study-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Stanford Medical School</h3>
+                        <p>Using AR for anatomy education and surgical training.</p>
+                        <span class="badge">Education</span>
+                        <div style="margin-top: 0.75rem;">
+                            <a class="btn btn-outline" href="https://med.stanford.edu/news/all-news/2024/02/augmented-reality-surgery.html" target="_blank" rel="noopener">Link</a>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-card">
+                        <div class="case-study-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Mayo Clinic</h3>
+                        <p>Implementing AR for patient education and treatment planning.</p>
+                        <span class="badge">Patient Care</span>
+                        <div style="margin-top: 0.75rem;">
+                            <a class="btn btn-outline" href="https://www.mayoclinic.org/medical-professionals/neurology-neurosurgery/news/seeing-through-the-walls-augmented-reality-facilitates-tumor-surgery/mac-20564365" target="_blank" rel="noopener">Link</a>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-card">
+                        <div class="case-study-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Johns Hopkins Hospital</h3>
+                        <p>AR-guided surgeries with improved precision and outcomes.</p>
+                        <span class="badge">Surgery</span>
+                        <div style="margin-top: 0.75rem;">
+                            <a class="btn btn-outline" href="https://www.hopkinsmedicine.org/news/articles/2021/02/johns-hopkins-performs-its-first-augmented-reality-surgeries-in-patients" target="_blank" rel="noopener">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Trends Section -->
+        <section id="future" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Future Trends</h2>
+                    <p class="section-description">The future of AR in healthcare</p>
+                </div>
+                
+                <div class="future-grid">
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Remote Surgery</h3>
+                        <p>AR-enabled remote surgical assistance and guidance.</p>
+                    </div>
+                    
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Telemedicine Integration</h3>
+                        <p>AR-enhanced virtual consultations and diagnostics.</p>
+                    </div>
+                    
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Advanced Simulation Labs</h3>
+                        <p>Next-generation AR medical training facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Interactive Demo</h2>
+                    <p class="section-description">Experience AR in medical applications through these demonstration videos.</p>
+                </div>
+                
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <div class="demo-video" style="position: relative; padding-top: 56.25%; height: 0;">
+                            <iframe src="https://www.youtube.com/embed/7C7zAXf2EI0" title="Surgery Training Demo"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                    style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
+                        </div>
+                        <h3>Surgery Training Demo</h3>
+                        <p>Watch AR-guided surgery training in action</p>
+                    </div>
+                    
+
+                    
+                    <div class="demo-card">
+                        <div class="demo-video" style="position: relative; padding-top: 56.25%; height: 0;">
+                            <iframe src="https://www.youtube.com/embed/XTZFHHSuSpI" title="Anatomy Visualization Demo"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                    style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
+                        </div>
+                        <h3>Anatomy Visualization Demo</h3>
+                        <p>Explore 3D anatomy models with AR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AR Medicine Quiz</h2>
+                    <p class="section-description">Test your knowledge about Augmented Reality in medicine.</p>
+                </div>
+                
+                <div class="quiz-container">
+                    <div id="quiz-start" class="quiz-start">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>AR Medicine Quiz</h3>
+                                <p>Test your knowledge about Augmented Reality in medicine.</p>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>Keep learning about AR in medicine!</p>
+                                <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-questions" class="quiz-questions" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="quiz-progress">
+                                    <span class="question-number">Question 1</span>
+                                    <span class="quiz-score">1 of 5</span>
+                                </div>
+                                <h3 id="question-text">What does AR stand for?</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="quiz-options">
+                                    <button class="quiz-option" onclick="selectAnswer(0)">Augmented Reality</button>
+                                    <button class="quiz-option" onclick="selectAnswer(1)">Artificial Reality</button>
+                                    <button class="quiz-option" onclick="selectAnswer(2)">Advanced Reality</button>
+                                    <button class="quiz-option" onclick="selectAnswer(3)">Automated Reality</button>
+                                </div>
+                                <div class="quiz-navigation">
+                                    <button class="btn btn-secondary" onclick="previousQuestion()" disabled>Previous</button>
+                                    <button class="btn btn-primary" onclick="nextQuestion()" disabled>Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-results" class="quiz-results" style="display: none;">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h3>Quiz Results</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="quiz-score-display">
+                                    <span>Your Score: </span>
+                                    <span id="final-score">0/5</span>
+                                </div>
+                                <p id="score-message">Keep learning about AR in medicine!</p>
+                                <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Find answers to common questions</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(0)">
+                            <span>What equipment is needed for medical AR?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Medical AR typically requires tablets, smartphones, or AR glasses, along with specialized software applications.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(1)">
+                            <span>How expensive is AR implementation in healthcare?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Costs vary widely, from basic tablet applications ($500-$2000) to advanced AR systems ($10,000-$50,000+).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(2)">
+                            <span>Is AR safe for medical use?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, when properly implemented and validated, AR is safe and can improve medical outcomes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(3)">
+                            <span>How long does it take to learn AR systems?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basic proficiency can be achieved in 1-2 weeks, with advanced mastery taking 1-3 months.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask AI in FAQ -->
+                <div class="faq-ask card" id="faq-ask-card">
+                    <div class="card-header">
+                        <h3 id="ai-faq-title">Ask the AI</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="faq-ask-form">
+                            <div class="form-group">
+                                <label for="faq-user-question" id="ai-faq-label">Your Question</label>
+                                <textarea id="faq-user-question" rows="3" placeholder="Type your question..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="faq-ask-btn">
+                                <i class="fas fa-robot"></i>
+                                Get Answer
+                            </button>
+                        </form>
+
+                        <div class="ai-response" id="faq-ai-response">
+                            <div class="ai-response-header">
+                                <i class="fas fa-message"></i>
+                                <span id="ai-response-title">AI Response</span>
+                            </div>
+                            <div class="ai-response-content" id="ai-response-content">Ask a question to see an answer here.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Resource Hub</h2>
+                    <p class="section-description">Access valuable resources and tools</p>
+                </div>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Research Papers</h3>
+                        <p>Latest research and publications</p>
+                        <a class="btn btn-outline" href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=augmented+reality+in+health&btnG=" target="_blank" rel="noopener">Access Papers</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>AR Tools & Software</h3>
+                        <p>AR development tools and platforms</p>
+                        <button class="btn btn-outline">Explore Tools</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Training Applications</h3>
+                        <p>Mobile apps for medical training</p>
+                        <button class="btn btn-outline">Download Apps</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Community Forum</h2>
+                    <p class="section-description">Connect with healthcare professionals and AR enthusiasts.</p>
+                </div>
+                
+                <div class="community-container">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3>Join the Discussion</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="community-posts">
+                                <div class="community-post">
+                                    <div class="post-header">
+                                        <i class="fas fa-user-md"></i>
+                                        <span class="post-author">Dr. Sarah Johnson</span>
+                                    </div>
+                                    <p class="post-content">AR has revolutionized our surgical training program at Stanford.</p>
+                                </div>
+                                
+                                <div class="community-post">
+                                    <div class="post-header">
+                                        <i class="fas fa-user-graduate"></i>
+                                        <span class="post-author">Prof. Michael Chen</span>
+                                    </div>
+                                    <p class="post-content">The anatomy visualization tools are incredible for medical education.</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary">
+                                <i class="fas fa-comments"></i>
+                                Join Community
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact & Support</h2>
+                    <p class="section-description">Get in touch with our team for collaboration or support.</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Send us a Message</h3>
+                            </div>
+                            <div class="card-body">
+                                <form id="contact-form">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-envelope"></i>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@armedicine.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>123 Medical Center Dr, Boston, MA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest updates on AR in healthcare.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="section section-muted">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Upcoming Events</h2>
+                </div>
+                
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <i class="fas fa-calendar"></i>
+                            <span class="event-date">March 15-17, 2024</span>
+                        </div>
+                        <h3>AR Medical Conference 2024</h3>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-header">
+                            <i class="fas fa-calendar"></i>
+                            <span class="event-date">April 22-24, 2024</span>
+                        </div>
+                        <h3>Healthcare Innovation Summit</h3>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Boston, MA</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>AR Medicine</span>
+                    </div>
+                    <p>Transforming healthcare through augmented reality.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#what-is-ar">What is AR?</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Connect</h4>
+                    <p>info@armedicine.com</p>
+                    <p>+88 01538362226</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fas fa-globe"></i></a>
+                        <a href="#"><i class="fas fa-comments"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AR Medicine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        <span>Top</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
